@@ -25,16 +25,15 @@ const SectionCheckout = () => {
       <CheckoutContainer>
         <Content>
           <h6>Contact</h6>
-          <h1>Ready to start building the future?</h1>
+          <h1>Ready to change restaurant business model </h1>
           <p>
-            Build websites that quickly accept payments with future-proof
-            technology that runs lightning-fast globally.
+            Build Self Services in your restaurant and start earning money with health and without worries
           </p>
-          <Seperator />
+          {/* <Seperator />
           <SliderTestimonials />
           <div style={{ textAlign: "center", margin: '30px auto 0 auto' }}>
             <Button>Contact</Button>
-          </div>
+          </div> */}
         </Content>
         {/* PASTE MOONCLERK FORM HTML ID HERE */}
         {/* <Form id="mc5exp0qlk2y40" ref={scriptEl} /> */}

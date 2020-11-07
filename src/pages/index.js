@@ -51,14 +51,12 @@ const IndexPage = () => {
         </Image>
         <ContentBlock>
           <Subheading>Save money</Subheading>
-          <h2>You will need less waitters.</h2>
+          <h2>You will need less waiters.</h2>
           <p>
-            No coding, merchant account, or hosting required. Create completely
-            customizable forms that can be embedded or shared anywhere. Automate
-            and integrate your processes with built-in tools and 3rd party
-            integrations.
+            Your waiters will only have to take care of serving. 
+            Taking note of customers will be left to Self Service, saving time and money.
           </p>
-          <List>
+          {/* <List>
             <li>Send funds to your bank account automatically</li>
             <li>Integrate with hundreds of third party providers</li>
             <li>Take granular control of your payment process</li>
@@ -66,7 +64,7 @@ const IndexPage = () => {
             <li>
               Power up with extensions: Digital Delivery, Mailchimp Pro, etc...
             </li>
-          </List>
+          </List> */}
         </ContentBlock>
       </ContentContainer>
       <ContentContainer content grid gridSplit>
@@ -77,17 +75,16 @@ const IndexPage = () => {
           <Subheading>Save time</Subheading>
           <h2>Avoid waiting.</h2>
           <p>
-            Gatsby is an open source, modern website framework that builds
-            performance into every site by leveraging the latest web
-            technologies such as React and GraphQL.
+          Customers will never leave tired of waiting. 
+          Shortly after sitting down at the table, the order will be directly in the kitchen.
           </p>
-          <List>
+          {/* <List>
             <li>Modern web tech without the headache</li>
             <li>Bring your own data</li>
             <li>Scale to the entire internet</li>
             <li>Future-proof your website</li>
             <li>Progressive Web Apps</li>
-          </List>
+          </List> */}
         </ContentBlock>
       </ContentContainer>
       <ContentContainer content grid gridSplit>
@@ -98,16 +95,17 @@ const IndexPage = () => {
           <Subheading>Covid-friendly</Subheading>
           <h2>Less interaccion between customers and waitters.</h2>
           <p>
-            The fastest way to build the fastest sites. Build, test, and deploy
-            globally with Netlify’s all-in-one platform for modern web projects
+          Fewer waiters and less contact between them. 
+          In these times, Self Service is the ideal application to keep your premises safe from Covid.
+          Besides, control your capacity and the necessary measures in a simple way
           </p>
-          <List>
+          {/* <List>
             <li>Modern web tech without the headache</li>
             <li>Bring your own data</li>
             <li>Scale to the entire internet></li>
             <li>Future-proof your website</li>
             <li>Progressive Web Apps</li>
-          </List>
+          </List> */}
         </ContentBlock>
       </ContentContainer>
       <SectionCheckout />

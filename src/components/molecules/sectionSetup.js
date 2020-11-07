@@ -12,10 +12,10 @@ const SectionSetup = () => {
   return (
     <Container content contentTop>
       <Intro>
-        <Subheading>Setup</Subheading>
+        <Subheading>What is</Subheading>
         <h2>
-          Get started.
-          <br /> In four quick steps.
+          Self Service?
+          <br />
         </h2>
       </Intro>
       <Setup>
@@ -24,25 +24,25 @@ const SectionSetup = () => {
             <SeperatorOne />
           </Seperator>
           <Number>1</Number>
-          <h3>Clone this repo to your local machine</h3>
+          <h3>Know the occupancy.</h3>
         </Step>
         <Step>
           <Seperator>
             <SeperatorTwo />
           </Seperator>
           <Number>2</Number>
-          <h3>Create a Stripe account if you don’t have one.</h3>
+          <h3>Identify with any table.</h3>
         </Step>
         <Step>
           <Seperator>
             <SeperatorThree />
           </Seperator>
           <Number>3</Number>
-          <h3>Create a MoonClerk account and set up a form</h3>
+          <h3>Order with your phone.</h3>
         </Step>
         <Step>
           <Number>4</Number>
-          <h3>Customize the starter and deploy to Netlify</h3>
+          <h3>The bill, please.</h3>
         </Step>
       </Setup>
     </Container>
