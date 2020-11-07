@@ -46,7 +46,7 @@ export default Navigation
 const Nav = styled.nav`
   align-items: center;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-around;
   padding: 2rem;
   position: absolute;
   top: 0;
