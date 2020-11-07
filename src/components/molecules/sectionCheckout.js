@@ -6,9 +6,11 @@ import Container from "@atoms/container"
 import SliderTestimonials from "@molecules/sliderTestimonials"
 import { media } from "@utils/media"
 import Button from "../atoms/button"
+import FormModal from "./formModal"
 
 const SectionCheckout = () => {
   const [loaded, setLoaded] = useState(false)
+  const [showForm, setShowForm] = useState(false)
   const scriptEl = useRef(null)
 
   // only add moonclerk.js when component mounts
@@ -30,11 +32,17 @@ const SectionCheckout = () => {
             Build websites that quickly accept payments with future-proof
             technology that runs lightning-fast globally.
           </p>
-          <Seperator />
-          <SliderTestimonials />
-          <div style={{ textAlign: "center", margin: '30px auto 0 auto' }}>
-            <Button>Contact</Button>
+          {/* <Seperator /> */}
+          {/* <SliderTestimonials /> */}
+          <div style={{ textAlign: "center", margin: "50px auto 0 auto" }}>
+            <Button
+              style={{ cursor: "pointer" }}
+              onClick={() => setShowForm(!showForm)}
+            >
+              Contact us
+            </Button>
           </div>
+          <FormModal show={showForm} backClicked={() => setShowForm(false)} />
         </Content>
         {/* PASTE MOONCLERK FORM HTML ID HERE */}
         {/* <Form id="mc5exp0qlk2y40" ref={scriptEl} /> */}
