@@ -50,10 +50,8 @@ const IndexPage = () => {
           <Img fluid={data.moonclerk.childImageSharp.fluid} />
         </Image>
         <ContentBlock>
-          <Subheading>MoonClerk</Subheading>
-          <h2>
-            Start accepting recurring and one-time online payments in 5 minutes.
-          </h2>
+          <Subheading>Save money</Subheading>
+          <h2>You will need less waitters.</h2>
           <p>
             No coding, merchant account, or hosting required. Create completely
             customizable forms that can be embedded or shared anywhere. Automate
@@ -69,12 +67,6 @@ const IndexPage = () => {
               Power up with extensions: Digital Delivery, Mailchimp Pro, etc...
             </li>
           </List>
-          <Button
-            href="https://moonclerk.com"
-            aria-label="Learn more about MoonClerk"
-          >
-            Learn More
-          </Button>
         </ContentBlock>
       </ContentContainer>
       <ContentContainer content grid gridSplit>
@@ -82,11 +74,8 @@ const IndexPage = () => {
           <Img fluid={data.gatsbyjs.childImageSharp.fluid} />
         </Image>
         <ContentBlock>
-          <Subheading>Gatsby</Subheading>
-          <h2>
-            Create blazing fast apps and websites without needing to become a
-            performance expert.
-          </h2>
+          <Subheading>Save time</Subheading>
+          <h2>Avoid waiting.</h2>
           <p>
             Gatsby is an open source, modern website framework that builds
             performance into every site by leveraging the latest web
@@ -99,12 +88,6 @@ const IndexPage = () => {
             <li>Future-proof your website</li>
             <li>Progressive Web Apps</li>
           </List>
-          <Button
-            href="https://gatsby.org"
-            aria-label="Learn more about Gatsby Js"
-          >
-            Learn More
-          </Button>
         </ContentBlock>
       </ContentContainer>
       <ContentContainer content grid gridSplit>
@@ -112,11 +95,8 @@ const IndexPage = () => {
           <Img fluid={data.netlify.childImageSharp.fluid} />
         </Image>
         <ContentBlock>
-          <Subheading>Netlify</Subheading>
-          <h2>
-            Run lightning-fast websites globally, with every change deployed
-            automatically.
-          </h2>
+          <Subheading>Covid-friendly</Subheading>
+          <h2>Less interaccion between customers and waitters.</h2>
           <p>
             The fastest way to build the fastest sites. Build, test, and deploy
             globally with Netlify’s all-in-one platform for modern web projects
@@ -128,12 +108,6 @@ const IndexPage = () => {
             <li>Future-proof your website</li>
             <li>Progressive Web Apps</li>
           </List>
-          <Button
-            href="https://netlify.com"
-            aria-label="Learn more about Netlify"
-          >
-            Learn More
-          </Button>
         </ContentBlock>
       </ContentContainer>
       <SectionCheckout />

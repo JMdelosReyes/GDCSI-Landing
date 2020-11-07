@@ -5,25 +5,26 @@ import Seperator from "@assets/seperators/a-seperator-4.svg"
 import Container from "@atoms/container"
 import SliderTestimonials from "@molecules/sliderTestimonials"
 import { media } from "@utils/media"
+import Button from "../atoms/button"
 
 const SectionCheckout = () => {
   const [loaded, setLoaded] = useState(false)
   const scriptEl = useRef(null)
 
   // only add moonclerk.js when component mounts
-  useEffect(() => {
-    const checkoutScript = document.createElement("script")
-    checkoutScript.id = "checkoutScript"
-    checkoutScript.src = withPrefix("/moonclerk.js")
-    scriptEl.current.appendChild(checkoutScript)
-    setLoaded(true)
-  }, [])
+  // useEffect(() => {
+  //   const checkoutScript = document.createElement("script")
+  //   checkoutScript.id = "checkoutScript"
+  //   checkoutScript.src = withPrefix("/moonclerk.js")
+  //   scriptEl.current.appendChild(checkoutScript)
+  //   setLoaded(true)
+  // }, [])
 
   return (
-    <Container content>
+    <Container content id="contact-form">
       <CheckoutContainer>
         <Content>
-          <h6>Checkout</h6>
+          <h6>Contact</h6>
           <h1>Ready to start building the future?</h1>
           <p>
             Build websites that quickly accept payments with future-proof
@@ -31,9 +32,12 @@ const SectionCheckout = () => {
           </p>
           <Seperator />
           <SliderTestimonials />
+          <div style={{ textAlign: "center", margin: '30px auto 0 auto' }}>
+            <Button>Contact</Button>
+          </div>
         </Content>
         {/* PASTE MOONCLERK FORM HTML ID HERE */}
-        <Form id="mc5exp0qlk2y40" ref={scriptEl} />
+        {/* <Form id="mc5exp0qlk2y40" ref={scriptEl} /> */}
       </CheckoutContainer>
     </Container>
   )
@@ -46,7 +50,7 @@ const CheckoutContainer = styled(Container)`
   border-radius: ${props => props.theme.button.radius};
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   max-width: 100%;
   grid-template-columns: var(--gridSplit);
 
@@ -60,6 +64,7 @@ const Content = styled.div`
   width: 100%;
 
   @media ${media.lg} {
+    margin: auto;
     width: 50%;
   }
 

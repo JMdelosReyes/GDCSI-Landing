@@ -25,8 +25,8 @@ const SectionHeader = () => {
       </Image>
       <Content>
         <Subheading>Get Started</Subheading>
-        <h1>Quickly Accept Payments with Gatsby & MoonClerk</h1>
-        <Button href="#checkout">Checkout</Button>
+        <h1>A matter of time!</h1>
+        <Button href="#contact-form">Contact</Button>
       </Content>
       <HeaderCurve fill="none" viewBox="0 0 1680 232">
         <path
@@ -81,6 +81,7 @@ const Content = styled.div`
   width: 100%;
 
   @media ${media.lg} {
+    margin-left: 10vw;
     width: 40%;
     flex-basis: 40%;
   }
