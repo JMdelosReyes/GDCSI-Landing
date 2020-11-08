@@ -174,7 +174,7 @@ const IndexPage = () => {
             <ul>
             <li>
                 <MdDone />
-                6 month
+                12 month
               </li>
               <li>
                 <MdDone />

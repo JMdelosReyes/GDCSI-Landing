@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import styled from "styled-components"
+import { media } from "@utils/media"
 
 class FormModal extends Component {
   state = {
@@ -49,7 +50,11 @@ class FormModal extends Component {
                 onSubmit={this.handleSubmit}
                 netlify-honeypot="bot-field"
                 data-netlify="true"
-              >
+              > <DivCenter>
+                <CenteredLabel>Do you want more information about Self Service?</CenteredLabel>
+                </DivCenter>
+                <ContentOffer>Subscribe to our notifications list and get special offers just for you!</ContentOffer>
+                <DivCenter>
                 <p>
                   <label>
                     Your Name:{" "}
@@ -61,6 +66,8 @@ class FormModal extends Component {
                     />
                   </label>
                 </p>
+                </DivCenter>
+                <DivCenter>
                 <p>
                   <label>
                     Your Email:{" "}
@@ -72,9 +79,10 @@ class FormModal extends Component {
                     />
                   </label>
                 </p>
-                <p>
-                  <button type="submit">Send</button>
-                </p>
+                </DivCenter>
+                <DivCenter>
+                  <Button type="submit">Subscribe</Button>
+                </DivCenter>
               </form>
             </Form>
           </>
@@ -102,12 +110,52 @@ const Form = styled.div`
   position: fixed;
   z-index: 1500;
   background-color: white;
-  width: 50%;
-  height: 50%;
+  width: min-content;
+  height: 70%;
   padding: 16px;
-  left: 25%;
-  top: 25%;
+  left: 10%;
+  top: 20%;
   box-sizing: border-box;
+  border-radius: ${props => props.theme.button.radius};
+  
+  @media ${media.lg} {
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    left: 25%;
+    top: 25%;
+  }
+`
+
+const Button = styled.button`
+  background-color: ${props => props.theme.colors.primary};
+  border-radius: ${props => props.theme.button.radius};
+  font-weight: 500;
+  padding: 0.75rem 2rem;
+  color: ${props => props.theme.colors.black};
+  text-decoration: none;
+  transition: ${props => props.theme.animation.transition};
+
+  &:hover {
+    filter: brightness(105%);
+    box-shadow: 0px 6px 24px rgba(242, 187, 99, 0.4);
+  }
+`
+const DivCenter = styled.div`
+  display: flex;
+  justify-content: center;
+`
+
+const CenteredLabel = styled.h5`
+  color: ${props => props.theme.colors.lightGray};
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+`
+const ContentOffer = styled.h5`
+  color: ${props => props.theme.colors.black};
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
 `
 
 export default FormModal
