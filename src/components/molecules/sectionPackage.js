@@ -31,15 +31,44 @@ const PackagesWrapper = styled.section`
   }
 
   .flex-container {
-    
-    flex-direction: column-reverse;
+    width: 50%;
+    flex-direction: column;
     padding-top: 80px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     display: flex;
-    @media (min-width: 992px) {
+   
+    
+    @media (min-width: 1512px) {
       flex-direction: row;
+      flex-wrap: wrap;
+      margin: auto;
+      justify-content: space-between;
+      width: 80%;
+      text-align: center;
+      align-items: center;
     }
+    @media (min-width: 1640px){
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: auto;
+      justify-content: space-around;
+      width: 80%;
+      text-align: center;
+      align-items: center;
+    }
+    
+    @media (max-width: 1511px) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin: auto;
+      justify-content: center;
+      width: 100%;
+      text-align: center;
+      align-items: center;
+
+    }
+
   }
 `
 

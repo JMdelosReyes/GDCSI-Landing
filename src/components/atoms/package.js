@@ -18,17 +18,16 @@ const PackageWrapper = styled.article`
   width: 100%;
   max-width: 350px;
   margin-bottom: 3rem;
-  margin-left: 10em;
-  @media (min-width: 100px) and (max-width: 992px){
-    width: calc(100%);
-    margin-bottom: 10em;
-    margin-left: 0;
-  }
-  @media (min-width: 992px) {
-    width: calc(100% / 3);
-    margin-bottom: 0;
-  }
+ 
 
+  @media (min-width: 1400px) and (max-width: 1639px){
+    margin-bottom: 7rem;
+    max-width: 500px;
+  }
+  @media (min-width: 1640px){
+    margin-bottom: 7rem;
+    max-width: 280px;
+  }
   .content {
     background: #F2BB63;
     color: black;
@@ -37,10 +36,10 @@ const PackageWrapper = styled.article`
     border-radius: 4px;
     box-shadow: 0px 0px 22px 7px rgba(0, 0, 0, 0.25);
     
-    
     .discount{
       color: #00BE0E
     }
+
     ul {
       padding-left: 0;
       list-style: none;
@@ -69,11 +68,14 @@ const PackageWrapper = styled.article`
     order: 1;
     z-index: 3;
     
-    @media (min-width: 992px) {
+    @media (min-width: 1403px) {
       order: 0;
       transform: scale(1.25);
     }
-
+    @media (min-width: 100px) and (max-width: 1403px){
+      order: 0;
+      transform: scale(1);
+    }
     .content {
       background: #F2BB63;
     }
@@ -83,7 +85,7 @@ const PackageWrapper = styled.article`
     }
     &::before {
       content: "";
-      position: absolute;
+      position: relative;
       top: -5px;
       right: 0px;
       bottom: -5px;

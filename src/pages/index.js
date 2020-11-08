@@ -4,10 +4,8 @@ import styled from "styled-components"
 import Layout from "@utils/layout"
 import SEO from "@utils/seo"
 import Img from "gatsby-image"
-import Button from "@atoms/button"
 import ContentBlock from "@atoms/contentBlock"
 import Container from "@atoms/container"
-import List from "@atoms/list"
 import Subheading from "@atoms/subheading"
 import SectionHeader from "@molecules/sectionHeader"
 import SectionSetup from "@molecules/sectionSetup"
@@ -16,7 +14,6 @@ import { MdDone, MdClear } from "react-icons/md"
 import Packages from "@molecules/sectionPackage.js"
 import Package from "@atoms/package.js"
 import { IconContext } from "react-icons"
-import { Link } from "react-scroll"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -115,7 +112,7 @@ const IndexPage = () => {
       </ContentContainer>
       <Packages
         title="Our Packages"
-        para="Choose the perfect solution for you. With benefits to suit all budgets Startup can offer amazing value and expert advice"
+        para="Choose the perfect solution for you. With benefits to suit all budgets Self Service can offer amazing value and expert advice"
       >
         <IconContext.Provider
           value={{
@@ -124,18 +121,24 @@ const IndexPage = () => {
             style: { verticalAlign: "middle", marginRight: "5px" },
           }}
         >
-          <Package title="FREE!" active={true}>
+          <Package title="FREE!" class="first" active={true}>
             <ul>
 
               <li>
                 <MdDone />
                 30 DAYS TRIAL
               </li>
+              <li>
+                <MdDone />
+                10 tables
+              </li>
               <li className="linethrough">
                 <MdClear color="red" />
                 Discount
               </li>
-
+              <li >
+              
+              </li>
             </ul>
           </Package>
           <Package title="60€/month" active={true}>
