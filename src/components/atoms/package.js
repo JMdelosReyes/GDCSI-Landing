@@ -19,6 +19,11 @@ const PackageWrapper = styled.article`
   max-width: 350px;
   margin-bottom: 3rem;
   margin-left: 10em;
+  @media (min-width: 100px) and (max-width: 992px){
+    width: calc(100%);
+    margin-bottom: 10em;
+    margin-left: 0;
+  }
   @media (min-width: 992px) {
     width: calc(100% / 3);
     margin-bottom: 0;
