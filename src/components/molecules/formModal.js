@@ -1,31 +1,86 @@
 import React, { Component } from "react"
 import styled from "styled-components"
-import { media } from "@utils/media"
 
 class FormModal extends Component {
+  state = {
+    name: "",
+    email: "",
+  }
+
+  encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&")
+  }
+
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: this.encode({ "form-name": "contact", ...this.state }),
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error))
+    e.preventDefault()
+  }
+
+  handleChange = e => this.setState({ [e.target.name]: e.target.value })
+
   render() {
-    return this.props.show ? (
+    const { name, email } = this.state
+
+    return (
       <>
-        <Back onClick={this.props.backClicked} />
-        <Form>
-          <form name="contact" method="POST" data-netlify="true">
-            <p>
-              <label>
-                Your Name: <input type="text" name="name" />
-              </label>
-            </p>
-            <p>
-              <label>
-                Your Email: <input type="email" name="email" />
-              </label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-          </form>
-        </Form>
+        <form
+          name="contact"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          hidden
+        >
+          <input type="text" name="name" />
+          <input type="email" name="email" />
+        </form>
+        {this.props.show ? (
+          <>
+            <Back onClick={this.props.backClicked} />
+            <Form>
+              <form
+                name="contact"
+                onSubmit={this.handleSubmit}
+                netlify-honeypot="bot-field"
+                data-netlify="true"
+              >
+                <p>
+                  <label>
+                    Your Name:{" "}
+                    <input
+                      type="text"
+                      name="name"
+                      value={name}
+                      onChange={this.handleChange}
+                    />
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    Your Email:{" "}
+                    <input
+                      type="email"
+                      name="email"
+                      value={email}
+                      onChange={this.handleChange}
+                    />
+                  </label>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>
+            </Form>
+          </>
+        ) : null}
       </>
-    ) : null
+    )
   }
 }
 
