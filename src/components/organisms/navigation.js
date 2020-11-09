@@ -8,7 +8,7 @@ import { media } from "@utils/media"
 const Navigation = ({ siteTitle }) => (
   <Nav>
     <Logo />
-    <NavLinks>
+    {/* <NavLinks>
       <li>
         <NavLink href="https://gatsbyjs.org" alt="">
           GatsbyJs
@@ -29,7 +29,7 @@ const Navigation = ({ siteTitle }) => (
           Netlify
         </NavLink>
       </li>
-    </NavLinks>
+    </NavLinks> */}
   </Nav>
 )
 
