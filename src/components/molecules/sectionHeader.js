@@ -9,7 +9,7 @@ import Subheading from "@atoms/subheading"
 const SectionHeader = () => {
   const data = useStaticQuery(graphql`
     query HeaderImageQuery {
-      file(relativePath: { eq: "checkouts-payments.png" }) {
+      file(relativePath: { eq: "checkouts-payments.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 800) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
@@ -62,6 +62,7 @@ const Image = styled.div`
   flex-basis: 100%;
   padding-top: 12rem;
   width: 100%;
+  border-radius: 1.2rem;
 
   @media ${media.lg} {
     padding: 0;

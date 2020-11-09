@@ -110,7 +110,7 @@ const Form = styled.div`
   position: fixed;
   z-index: 1500;
   background-color: white;
-  width: min-content;
+  width: 80%;
   height: 70%;
   padding: 16px;
   left: 10%;
