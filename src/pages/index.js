@@ -55,8 +55,8 @@ const IndexPage = () => {
           <Subheading>Save money</Subheading>
           <h2>You will need less waiters.</h2>
           <p>
-            Your waiters will only have to take care of serving.
-            Taking note of customers will be left to Self Service, saving time and money.
+            Your waiters will only have to take care of serving. Taking note of
+            customers will be left to Self Service, saving time and money.
           </p>
           {/* <List>
             <li>Send funds to your bank account automatically</li>
@@ -77,8 +77,8 @@ const IndexPage = () => {
           <Subheading>Save time</Subheading>
           <h2>Avoid waiting.</h2>
           <p>
-            Customers will never leave tired of waiting.
-            Shortly after sitting down at the table, the order will be directly in the kitchen.
+            Customers will never leave tired of waiting. Shortly after sitting
+            down at the table, the order will be directly in the kitchen.
           </p>
           {/* <List>
             <li>Modern web tech without the headache</li>
@@ -97,9 +97,10 @@ const IndexPage = () => {
           <Subheading>Covid-friendly</Subheading>
           <h2>Less interaccion between customers and waitters.</h2>
           <p>
-            Fewer waiters and less contact between them.
-            In these times, Self Service is the ideal application to keep your premises safe from Covid.
-            Besides, control your capacity and the necessary measures in a simple way
+            Fewer waiters and less contact between them. In these times, Self
+            Service is the ideal application to keep your premises safe from
+            Covid. Besides, control your capacity and the necessary measures in
+            a simple way
           </p>
           {/* <List>
             <li>Modern web tech without the headache</li>
@@ -123,7 +124,6 @@ const IndexPage = () => {
         >
           <Package title="FREE!" class="first" active={true}>
             <ul>
-
               <li>
                 <MdDone />
                 30 DAYS TRIAL
@@ -136,16 +136,13 @@ const IndexPage = () => {
                 <MdClear color="red" />
                 Discount
               </li>
-              <li >
-              
-              </li>
+              <li></li>
             </ul>
           </Package>
           <Package title="60€/month" active={true}>
             <ul>
               <li>
-                <MdDone />
-                3 month
+                <MdDone />3 month
               </li>
               <li>
                 <MdDone />
@@ -160,22 +157,21 @@ const IndexPage = () => {
           <Package title="54€/month" active={true}>
             <ul>
               <li>
-                <MdDone />
-                6 month
+                <MdDone />6 month
               </li>
               <li>
                 <MdDone />
                 10 tables
               </li>
-              <li class="discount">
-                <MdDone  />
+              <li className="discount">
+                <MdDone />
                 10% off
               </li>
             </ul>
           </Package>
           <Package title="45€/month" active={true}>
             <ul>
-            <li>
+              <li>
                 <MdDone />
                 12 month
               </li>
@@ -183,8 +179,8 @@ const IndexPage = () => {
                 <MdDone />
                 10 tables
               </li>
-              <li class="discount" >
-                <MdDone  />
+              <li className="discount">
+                <MdDone />
                 12.5% off
               </li>
             </ul>

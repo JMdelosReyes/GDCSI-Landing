@@ -15,13 +15,15 @@ class FormModal extends Component {
   }
 
   handleSubmit = e => {
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: this.encode({ "form-name": "contact", ...this.state }),
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error))
+    if (this.state.name && this.state.email) {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({ "form-name": "contact", ...this.state }),
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error))
+    }
     e.preventDefault()
   }
 
@@ -50,35 +52,44 @@ class FormModal extends Component {
                 onSubmit={this.handleSubmit}
                 netlify-honeypot="bot-field"
                 data-netlify="true"
-              > <DivCenter>
-                <CenteredLabel>Do you want more information about Self Service?</CenteredLabel>
-                </DivCenter>
-                <ContentOffer>Subscribe to our notifications list and get special offers just for you!</ContentOffer>
+              >
+                {" "}
                 <DivCenter>
-                <p>
-                  <label>
-                    Your Name:{" "}
-                    <input
-                      type="text"
-                      name="name"
-                      value={name}
-                      onChange={this.handleChange}
-                    />
-                  </label>
-                </p>
+                  <CenteredLabel>
+                    Do you want more information about Self Service?
+                  </CenteredLabel>
+                </DivCenter>
+                <ContentOffer>
+                  Subscribe to our notifications list and get special offers
+                  just for you!
+                </ContentOffer>
+                <DivCenter>
+                  <p>
+                    <label>
+                      Your Name:{" "}
+                      <input
+                        required
+                        type="text"
+                        name="name"
+                        value={name}
+                        onChange={this.handleChange}
+                      />
+                    </label>
+                  </p>
                 </DivCenter>
                 <DivCenter>
-                <p>
-                  <label>
-                    Your Email:{" "}
-                    <input
-                      type="email"
-                      name="email"
-                      value={email}
-                      onChange={this.handleChange}
-                    />
-                  </label>
-                </p>
+                  <p>
+                    <label>
+                      Your Email:{" "}
+                      <input
+                        required
+                        type="email"
+                        name="email"
+                        value={email}
+                        onChange={this.handleChange}
+                      />
+                    </label>
+                  </p>
                 </DivCenter>
                 <DivCenter>
                   <Button type="submit">Subscribe</Button>
@@ -117,7 +128,7 @@ const Form = styled.div`
   top: 20%;
   box-sizing: border-box;
   border-radius: ${props => props.theme.button.radius};
-  
+
   @media ${media.lg} {
     margin: auto;
     width: 50%;
