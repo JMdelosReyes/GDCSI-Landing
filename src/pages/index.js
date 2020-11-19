@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Layout from "@utils/layout"
@@ -14,6 +14,7 @@ import { MdDone, MdClear } from "react-icons/md"
 import Packages from "@molecules/sectionPackage.js"
 import Package from "@atoms/package.js"
 import { IconContext } from "react-icons"
+import FormModal from "../components/molecules/formModal"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -42,8 +43,19 @@ const IndexPage = () => {
     }
   `)
 
+  const [showForm, setShowForm] = useState(false)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowForm(true)
+    }, 20000)
+  }, [])
+
+  console.log(showForm)
+
   return (
     <Layout>
+      <FormModal show={showForm} backClicked={() => setShowForm(false)} />
       <SEO title="Home" />
       <SectionHeader />
       <SectionSetup />
