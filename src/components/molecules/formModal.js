@@ -92,9 +92,16 @@ class FormModal extends Component {
                   </p>
                 </DivCenter>
                 <DivCenter>
+                  <CenteredRed>
+
+                    Contact now and get early access. 1000 left.
+                  </CenteredRed>
+                </DivCenter>
+                <DivCenter>
                   <Button type="submit">Subscribe</Button>
                 </DivCenter>
               </form>
+
             </Form>
           </>
         ) : null}
@@ -163,6 +170,13 @@ const CenteredLabel = styled.h5`
   margin-bottom: 1rem;
   text-transform: uppercase;
 `
+
+const CenteredRed = styled.h6`
+  color: red;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+ 
+  `
 const ContentOffer = styled.h5`
   color: ${props => props.theme.colors.black};
   letter-spacing: 1px;
