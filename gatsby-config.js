@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter MoonClerk`,
-    description: `A Gatsby starter for creating SaaS landing pages using MoonClerk to accept payments.`,
-    author: `@moonclerk`,
+    title: `Self Service`,
+    description: `A matter of time.`,
+    author: `Master-team`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

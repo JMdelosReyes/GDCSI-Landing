@@ -40,6 +40,13 @@ const IndexPage = () => {
           }
         }
       }
+      stock: file(relativePath: { eq: "harvest.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 800) {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
     }
   `)
 
@@ -50,8 +57,6 @@ const IndexPage = () => {
       setShowForm(true)
     }, 20000)
   }, [])
-
-  console.log(showForm)
 
   return (
     <Layout>
@@ -112,15 +117,23 @@ const IndexPage = () => {
             Fewer waiters and less contact between them. In these times, Self
             Service is the ideal application to keep your premises safe from
             Covid. Besides, control your capacity and the necessary measures in
-            a simple way
+            a simple way.
           </p>
-          {/* <List>
-            <li>Modern web tech without the headache</li>
-            <li>Bring your own data</li>
-            <li>Scale to the entire internet></li>
-            <li>Future-proof your website</li>
-            <li>Progressive Web Apps</li>
-          </List> */}
+        </ContentBlock>
+      </ContentContainer>
+      <ContentContainer content grid gridSplit>
+        <Image>
+          <Img fluid={data.stock.childImageSharp.fluid} />
+        </Image>
+        <ContentBlock>
+          <Subheading>Sync your stock and menu</Subheading>
+          <h2>Keep your menu updated according to your stock</h2>
+          <p>
+            Establish a stock of the ingredients available in your establishment,
+            and as dishes are ordered, your stock will be automatically updated,
+            informing you when there is low stock and keeping in the menu only
+            the dishes that can be elaborated.
+          </p>
         </ContentBlock>
       </ContentContainer>
       <Packages

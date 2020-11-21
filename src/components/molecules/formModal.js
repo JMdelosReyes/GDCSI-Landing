@@ -171,8 +171,9 @@ const CenteredLabel = styled.h5`
   text-transform: uppercase;
 `
 
-const CenteredRed = styled.h6`
+const CenteredRed = styled.h5`
   color: red;
+  font-size: 0.77837rem;
   letter-spacing: 1.5px;
   margin-bottom: 1rem;
  
